@@ -10,7 +10,10 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:123@localhost:54320/dna_practice'
+# 123 is the password, 
+# dna_practice is name of the schema
+# 54320 is the port for postgres
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql://postgres:123@localhost:54320/dna_practice' 
 app.debug = True
 db = SQLAlchemy(app)
 
